@@ -2,17 +2,169 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DJVQ</title>
-    <link>https://djvq.github.io/</link>
+    <link>https://djvq001.github.io/</link>
     <description>Recent content on DJVQ</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 12 Feb 2021 21:24:23 +0800</lastBuildDate><atom:link href="https://djvq.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Feb 2021 21:24:23 +0800</lastBuildDate><atom:link href="https://djvq001.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>hugo&#43;github搭建个人博客</title>
-      <link>https://djvq.github.io/posts/helloworld/</link>
+      <title>Windows系统下使用hugo&#43;github搭建个人博客</title>
+      <link>https://djvq001.github.io/posts/myblog/</link>
       <pubDate>Fri, 12 Feb 2021 21:24:23 +0800</pubDate>
       
-      <guid>https://djvq.github.io/posts/helloworld/</guid>
-      <description></description>
+      <guid>https://djvq001.github.io/posts/myblog/</guid>
+      <description>实现方法 搭建一个简易个人博客，使用hugo配置博客主题样式，使用GitHub仓库代替云服务器，实现云端更新个人博客
+准备工具 1.GitHub账号
+若没有则注册
+2.git工具。
+下载链接：https://git-scm.com/downloads
+安装方法：一直下一步即可
+3.hugo
+安装完git之后，管理员方式打开git bash，输入以下代码安装：
+Chocolatey:
+choco install hugo -confirm 或者
+Scoop:
+scoop install hugo 上面两种方式选择一种即可。
+4.文本编辑器
+notepad++或者subline之类的都可以，用于编辑配置文件。
+具体步骤 1.确保hugo已经安装完成，打开git或者命令行输入
+hugo version 若显示版本号则说明安装成功，若不成功则再找原因
+2.创建一个新博客：
+hugo new site [你的博客名] 3.进入新创建的博客目录下的themes目录，导入主题，可选择官网下载主题并解压到该目录，网址：themes.hugo.io(注意此方式下载的主题文件解压后文件夹名字后面的-master最好删掉)。也可直接在themes目录下打开git并使用命令下载，相关代码如下：
+git clone https://github.com/vjeantet/hugo-theme-m10c.git casper 4.对于已经下载好的主题，需要配置博客目录下的config文件，其中最重要的是baseUrl需要改为GitHub仓库地址如:
+BaseUrl=&amp;quot;https://djvq.github.io/&amp;quot; 其次是主题目录：
+themesDir = &amp;quot;./themes&amp;quot; 还有主题：
+theme = &amp;quot;m10c&amp;quot; 其余的根据个人需要更改
+5.博客目录下打开git bash输入以下代码运行
+hugo server 浏览器打开网址：localhost：1313，若能加载出博客则说明本地配置完成
+6.部署到GitHub仓库 Github新建仓库，仓库名字格式为[你的GitHub用户名].github.io
+下面Add a ReadME file 最好勾上，其余默认即可。</description>
+    </item>
+    
+    <item>
+      <title>Creating a New Theme</title>
+      <link>https://djvq001.github.io/posts/creating-a-new-theme/</link>
+      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://djvq001.github.io/posts/creating-a-new-theme/</guid>
+      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
+We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+    </item>
+    
+    <item>
+      <title>(Hu)go Template Primer</title>
+      <link>https://djvq001.github.io/posts/goisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://djvq001.github.io/posts/goisforlovers/</guid>
+      <description>Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
+This document is a brief primer on using Go templates.</description>
+    </item>
+    
+    <item>
+      <title>Getting Started with Hugo</title>
+      <link>https://djvq001.github.io/posts/hugoisforlovers/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://djvq001.github.io/posts/hugoisforlovers/</guid>
+      <description>Step 1. Install Hugo Go to Hugo releases and download the appropriate version for your OS and architecture.
+Save it somewhere specific as we will be using it in the next step.
+More complete instructions are available at Install Hugo
+Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
+Follow the following steps:
+ Clone the Hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
+    </item>
+    
+    <item>
+      <title>Migrate to Hugo from Jekyll</title>
+      <link>https://djvq001.github.io/posts/migrate-from-jekyll/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://djvq001.github.io/posts/migrate-from-jekyll/</guid>
+      <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
+▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
+▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
+    </item>
+    
+    <item>
+      <title>Test 9</title>
+      <link>https://djvq001.github.io/posts/test-9/</link>
+      <pubDate>Thu, 09 Jan 1012 00:00:00 +0000</pubDate>
+      
+      <guid>https://djvq001.github.io/posts/test-9/</guid>
+      <description>Test 9</description>
+    </item>
+    
+    <item>
+      <title>Test 8</title>
+      <link>https://djvq001.github.io/posts/test-8/</link>
+      <pubDate>Wed, 08 Jan 1012 00:00:00 +0000</pubDate>
+      
+      <guid>https://djvq001.github.io/posts/test-8/</guid>
+      <description>Test 8</description>
+    </item>
+    
+    <item>
+      <title>Test 7</title>
+      <link>https://djvq001.github.io/posts/test-7/</link>
+      <pubDate>Tue, 07 Jan 1012 00:00:00 +0000</pubDate>
+      
+      <guid>https://djvq001.github.io/posts/test-7/</guid>
+      <description>Test 7</description>
+    </item>
+    
+    <item>
+      <title>Test 6</title>
+      <link>https://djvq001.github.io/posts/test-6/</link>
+      <pubDate>Mon, 06 Jan 1012 00:00:00 +0000</pubDate>
+      
+      <guid>https://djvq001.github.io/posts/test-6/</guid>
+      <description>Test 6</description>
+    </item>
+    
+    <item>
+      <title>Test 5</title>
+      <link>https://djvq001.github.io/posts/test-5/</link>
+      <pubDate>Sun, 05 Jan 1012 00:00:00 +0000</pubDate>
+      
+      <guid>https://djvq001.github.io/posts/test-5/</guid>
+      <description>Test 5</description>
+    </item>
+    
+    <item>
+      <title>Test 4</title>
+      <link>https://djvq001.github.io/posts/test-4/</link>
+      <pubDate>Sat, 04 Jan 1012 00:00:00 +0000</pubDate>
+      
+      <guid>https://djvq001.github.io/posts/test-4/</guid>
+      <description>Test 4</description>
+    </item>
+    
+    <item>
+      <title>Test 3</title>
+      <link>https://djvq001.github.io/posts/test-3/</link>
+      <pubDate>Fri, 03 Jan 1012 00:00:00 +0000</pubDate>
+      
+      <guid>https://djvq001.github.io/posts/test-3/</guid>
+      <description>Test 3</description>
+    </item>
+    
+    <item>
+      <title>Test 2</title>
+      <link>https://djvq001.github.io/posts/test-2/</link>
+      <pubDate>Thu, 02 Jan 1012 00:00:00 +0000</pubDate>
+      
+      <guid>https://djvq001.github.io/posts/test-2/</guid>
+      <description>Test 2</description>
+    </item>
+    
+    <item>
+      <title>Test 1</title>
+      <link>https://djvq001.github.io/posts/test-1/</link>
+      <pubDate>Wed, 01 Jan 1012 00:00:00 +0000</pubDate>
+      
+      <guid>https://djvq001.github.io/posts/test-1/</guid>
+      <description>Test 1 I am referencing a footnote1
+1package main 2 3import &amp;#34;fmt&amp;#34; 4 5func main() { 6 fmt.Println(&amp;#34;{linenos=inline}&amp;#34;) 7} 1 2 3 4 5 6 7  package main import &amp;#34;fmt&amp;#34; func main() { fmt.Println(&amp;#34;{linenos=table}&amp;#34;) }   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in dictum tortor. Morbi laoreet enim id sem euismod lobortis. Donec quam libero, bibendum non cursus vitae, dictum vel eros.   I am the footnote &amp;#x21a9;&amp;#xfe0e;</description>
     </item>
     
   </channel>
